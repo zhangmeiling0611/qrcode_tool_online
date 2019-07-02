@@ -36,10 +36,7 @@ def qr():
     
     #第三步：返回二维码图像数据
     return flask.send_file(bi,"image/png")
-
-
-
-    
+ 
 if __name__ == '__main__':
     #app.run(debug=True,host="0.0.0.0")
     app.run(debug=True)

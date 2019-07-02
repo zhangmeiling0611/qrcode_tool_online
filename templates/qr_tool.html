@@ -8,7 +8,7 @@
     <script>
         function gen_qrcode()  {
             //获取文本框中用户输入的数据
-            var data = document.getElementsByName("data")[0].value();
+            var data = document.getElementsByName("data")[0].value;
             //获取显示二维码图片的img对象
             var qr_img = document.getElementById("qr_img");
             //给img对象的src对象赋值
@@ -23,12 +23,8 @@
     
     </script>
 </head>
-<body onkeydown="enter_key_handle">
-    <form action="/qr" method="GET">
-        <label>内容：</label><input name="data" type="text"><button  type="submit" style="margin-left:3px" onclick="gen_qrcode()">生成</button><br/>
-        <img src="" id="qr_img">
-
-    
-    </form>
+<body onkeydown="enter_key_handle()">
+    <label>内容：</label><input name="data" type="text"><button  type="button" style="margin-left:3px" onclick="gen_qrcode()">生成</button><br/>
+    <img src="" id="qr_img">
 </body>
 </html>
